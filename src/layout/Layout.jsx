@@ -1,8 +1,19 @@
 import React from 'react'
+import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer/Footer'
+import Home from '../views/Home'
+import Entrepreneurships from '../views/Entrepreneurships'
 
 function Layout() {
   return (
-    <div>Layout</div>
+    <div>
+      <Navbar />
+        <main>
+          <Home />
+          <Entrepreneurships />
+        </main>
+      <Footer />
+    </div>
   )
 }
 
