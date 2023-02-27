@@ -10,7 +10,6 @@ function Layout() {
       <Navbar />
         <main>
           <Home />
-          <Entrepreneurships />
         </main>
       <Footer />
     </div>
