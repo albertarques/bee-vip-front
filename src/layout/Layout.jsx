@@ -1,8 +1,16 @@
 import React from 'react'
+import Navbar from '../components/navbar/Navbar'
+import Footer from '../components/footer/Footer'
 
 function Layout() {
   return (
-    <div>Layout</div>
+    <div>
+      <Navbar />
+      <main>
+
+      </main>
+      <Footer />
+    </div>
   )
 }
 

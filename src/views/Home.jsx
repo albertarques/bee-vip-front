@@ -1,17 +1,10 @@
 import React from 'react'
-import Login from '../components/Login'
-import Button from '../components/Button'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Layout from '../layout/Layout'
 
 function Home() {
   return (
     <div>
-        <Navbar/>
-        <h1>Login</h1>
-        <Login />
-        <Button/>
-        <Footer/>
+     <Layout />
     </div>
   )
 }

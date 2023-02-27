@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Emprendimientos() {
+function Entrepreneurship() {
   return (
     <div>Emprendimientos</div>
   )
 }
 
-export default Emprendimientos
+export default Entrepreneurship

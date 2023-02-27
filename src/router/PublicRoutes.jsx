@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // Views
 import Home from '../views/Home'
-import Emprendimientos from '../views/Emprendimientos'
+import Entrepreneurship from '../views/Entrepreneuships'
 
 function PublicRoutes() {
   return (
     <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/entrepreneurships' element={ <Emprendimientos /> } />
+          <Route path='/entrepreneurships' element={ <Entrepreneurship/> } />
         </Routes>
     </Router> 
   )
