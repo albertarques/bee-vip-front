@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 // Views
 import Home from '../views/Home'
 import Emprendimientos from '../views/Emprendimientos'
+import EntrepreneurshipRegister from '../views/EntrepreneurshipRegister'
 
 
 
@@ -13,6 +14,7 @@ function PublicRoutes() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/entrepreneurships' element={ <Emprendimientos /> } />
+          <Route path='/entrepreneurshipsregister' element={ <EntrepreneurshipRegister /> } />
         </Routes>
     </Router> 
   )
