@@ -11,7 +11,6 @@ function Layout() {
       <Navbar />
         <main>
           <Home />
-          <SingleEntrepreneurship />
         </main>
       <Footer />
     </div>
