@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import Home from '../views/Home'
 import Entrepreneurships from '../views/Entrepreneurships'
+import SingleEntrepreneurship from '../views/SingleEntrepreneurship'
 
 function Layout() {
   return (
@@ -10,6 +11,7 @@ function Layout() {
       <Navbar />
         <main>
           <Home />
+          <SingleEntrepreneurship />
         </main>
       <Footer />
     </div>
