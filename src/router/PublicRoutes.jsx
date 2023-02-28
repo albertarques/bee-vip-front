@@ -7,6 +7,8 @@ import Emprendimientos from '../views/Emprendimientos'
 import RegisterView from '../views/RegisterView'
 import LoginView from '../views/LoginView'
 
+
+
 function PublicRoutes() {
   return (
     <Router>
