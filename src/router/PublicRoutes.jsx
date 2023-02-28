@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from '../views/Home'
 import Emprendimientos from '../views/Emprendimientos'
 
+
+
 function PublicRoutes() {
   return (
     <Router>
