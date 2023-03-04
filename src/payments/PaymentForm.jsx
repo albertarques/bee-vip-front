@@ -51,21 +51,21 @@ export default function PaymentForm() {
 			<form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 
 				<div className="mb-4">
-					<label className="block text-gray-700 text-sm font-bold mb-2" for="email">
+					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
 						Email
 					</label>
 					<input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="email" value={email} onChange={handleEmailChange} />
 				</div>
 
 				<div className="mb-4">
-					<label className="block text-gray-700 text-sm font-bold mb-2" for="Amount">
+					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Amount">
 						Amount
 					</label>
 					<input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="amount" value={amount} onChange={handleAmountChange} />
 				</div>
 
 				<div className="mb-6">
-					<label className="block text-gray-700 text-sm font-bold mb-2" for="Description">
+					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Description">
 						Description
 					</label>
 					<input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="description" value={description} onChange={handleDescriptionChange} />
