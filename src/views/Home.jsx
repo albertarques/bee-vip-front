@@ -42,7 +42,7 @@ export default function Home() {
           {!loading && console.log(data)}
           {!loading && data.entrepreneurships.slice(0,3).map(item => (
             <Link to={`/entrepreneurship/${item.id}`} key={item.id}>
-              <CategoryPopularSlider title={item.name} image={Coffee} />
+              <CategoryPopularSlider title={item.title} image={Coffee} />
             </Link>
           ))}
         </div>
