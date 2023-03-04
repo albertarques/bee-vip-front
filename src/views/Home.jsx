@@ -6,30 +6,30 @@ import CategoryHomeCard from '../components/partials/CategoryCard/CategoryHomeCa
 import InfoHome from '../components/InfoHome/InfoHome'
 import axios from 'axios'
 import Coffee from '../assets/coffee.jpg'
+import { getEntrepreneurshipData } from '../apiService/entrepreneurshipService'
+import { getCategoriesData } from '../apiService/categoriesService'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   const [search, setSearch] = useState("")
 
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [data, setData] = useState();
+  const [categories, setCategories] = useState();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get('http://localhost:8000/api/entrepreneurships')
-        console.log(response.data)
-        setData(response.data)
-        setError(null)
-      } catch (err) {
-        setError(err.message)
-        setData(null)
-      } finally {
-        setLoading(false)
-      }
-    };
-    getData()
-  }, [])
+    async function getData(){
+      const entrepreneurships = await getEntrepreneurshipData();
+      setData(entrepreneurships.data);
+      const categories = await getCategoriesData();
+      setCategories(categories.data.categories)
+      console.log(categories)
+      setLoading(false);
+
+    }
+    getData();
+  }, []);
 
   return (
     <div className="font-sans bg-slate-50">
@@ -41,23 +41,26 @@ export default function Home() {
       <section className="container mt-4 mb-4 px-2 mx-auto">
         <h2 className="text-base font-medium font-title">Emprendimientos populares</h2>
         <div className="flex flex-row gap-2 mt-4 mb-4 overflow-x-scroll">
-          {data && data.entrepreneurships.slice(0,3).map(item => (
-            <a href={`/entrepreneurship/${item.id}`}>
-              <CategoryPopularSlider key={item.id} title={item.name} image={Coffee} />
-            </a>
+          {!loading && console.log(data)}
+          {!loading && data.entrepreneurships.slice(0,3).map(item => (
+            <Link to={`/entrepreneurship/${item.id}`} key={item.id}>
+              <CategoryPopularSlider title={item.name} image={Coffee} />
+            </Link>
           ))}
         </div>
         
         <h2 className="text-base font-medium font-title">Emprendimientos</h2>
         <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
-          {data && data.categories.slice(0,6).map(item => (
-            <CategoryMainSlider key={item.id} name={item.name} />
+          {!loading && categories.slice(0,6).map(item => (
+            <CategoryMainSlider name={item.name} />
           ))}
         </div>
         
-        <div className="flex flex-row mt-4 mb-4 flex-wrap gap-2">
-          {data && data.entrepreneurships.slice(0,3).map(item => (
-            <CategoryHomeCard key={item.id} title={item.title} image={Coffee} />
+        <div className="relative flex-shrink-0 w-full h-full">
+          {!loading && data.entrepreneurships.slice(0,3).map(item => (
+            <Link to={`/entrepreneurship/${item.id}`} key={item.id} className="flex flex-row mt-4 mb-4 flex-wrap gap-2">
+              <CategoryHomeCard title={item.title}/>
+            </Link>
           ))}
         </div>
 
