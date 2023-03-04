@@ -1,13 +1,9 @@
 import './App.css'
-
 import PublicRoutes from './router/PublicRoutes'
 
-
-
 function App() {
-
   return (
-      <PublicRoutes/>
+    <PublicRoutes />
   )
 }
 

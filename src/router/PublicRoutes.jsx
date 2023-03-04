@@ -6,8 +6,6 @@ import Home from '../views/Home'
 import Emprendimientos from '../views/Emprendimientos'
 import EntrepreneurshipRegister from '../views/EntrepreneurshipRegister'
 
-
-
 function PublicRoutes() {
   return (
     <Router>
