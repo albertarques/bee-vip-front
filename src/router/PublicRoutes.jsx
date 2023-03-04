@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // Views
 import Home from '../views/Home'
-import Emprendimientos from '../views/Emprendimientos'
 import Aboutus from '../views/Aboutus'
 import RegisterView from '../views/RegisterView'
 import LoginView from '../views/LoginView'
@@ -16,7 +15,6 @@ function PublicRoutes() {
     <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/entrepreneurships' element={ <Emprendimientos /> } />
           <Route path='/aboutus' element={ <Aboutus /> } />
           <Route path='/loginview' element={ <LoginView /> } />
           <Route path='/registerview' element={ <RegisterView /> } />
