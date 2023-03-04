@@ -1,16 +1,18 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout from '../layout/Layout'
-import Entrepreneurships from '../views/Entrepreneurships'
-import SingleEntrepreneurship from '../views/SingleEntrepreneurship'
+
+// Views
+import Home from '../views/Home'
+import Emprendimientos from '../views/Emprendimientos'
+import EntrepreneurshipRegister from '../views/EntrepreneurshipRegister'
 
 function PublicRoutes() {
   return (
     <Router>
         <Routes>
-          <Route path='/' element={<Layout />} />
-          <Route path='/entrepreneurships' element={ <Entrepreneurships /> } />
-          <Route path='/entrepreneurship/:id' element={ <SingleEntrepreneurship /> } />
+          <Route path='/' element={<Home />} />
+          <Route path='/entrepreneurships' element={ <Emprendimientos /> } />
+          <Route path='/entrepreneurshipsregister' element={ <EntrepreneurshipRegister /> } />
         </Routes>
     </Router> 
   )
