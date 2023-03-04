@@ -7,11 +7,11 @@ function LoginView() {
   return (
     <div className='loginview px-2'>
         <br />
-        <Login/>
+        <Login />
         <br />
         <hr />
         <br />
-        <a href="RegisterView">No tengo cuenta</a>
+        <a href="Register">No tengo cuenta</a>
     </div>
   )
 }

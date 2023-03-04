@@ -1,12 +1,12 @@
 import React from 'react'
 import AboutUs from '../components/About/AboutUs'
 
-function Aboutus() {
+function About() {
   return (
     <div>
-        <AboutUs/>
+        <AboutUs />
     </div>
   )
 }
 
-export default Aboutus
+export default About

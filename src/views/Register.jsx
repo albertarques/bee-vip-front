@@ -5,11 +5,11 @@ import '../styles/login.css'
 function RegisterView() {
   return (
     <div className='loginview px-2'>
-        <Register/>
+        <Register />
         <br />
         <hr />
         <br />
-        <a href="LoginView">Ya tengo cuenta</a>
+        <a href="Login">Ya tengo cuenta</a>
     </div>
   )
 }
