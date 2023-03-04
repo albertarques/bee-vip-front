@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Searchbar() {
+export default function Searchbar(props) {
   return (
     <div className="mb-2">
       <form>   

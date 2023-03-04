@@ -11,7 +11,7 @@ import { getCategoriesData } from '../apiService/categoriesService'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("")
 
   const [data, setData] = useState();
   const [categories, setCategories] = useState();
@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       <section className="container mt-4 mb-4 px-2 mx-auto">
-        <h2 className="text-base font-medium font-title">Categorías populares</h2>
+        <h2 className="text-base font-medium font-title">Emprendimientos populares</h2>
         <div className="flex flex-row gap-2 mt-4 mb-4 overflow-x-scroll">
           {!loading && console.log(data)}
           {!loading && data.entrepreneurships.slice(0,3).map(item => (
@@ -49,7 +49,7 @@ export default function Home() {
           ))}
         </div>
         
-        <h2 className="text-base font-medium font-title">Categorías</h2>
+        <h2 className="text-base font-medium font-title">Emprendimientos</h2>
         <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
           {!loading && categories.slice(0,6).map(item => (
             <CategoryMainSlider name={item.name} />

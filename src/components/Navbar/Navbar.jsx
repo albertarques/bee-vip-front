@@ -17,22 +17,22 @@ export default function Navbar() {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="flex flex-col p-4 mt-4 font-medium font-sans rounded-lg bg-yellow-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-semibold">
               <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                <a href="/" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Categorías</a>
+                <a href="/entrepreneurships" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Emprendimientos</a>
               </li>
               <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre nosotros</a>
+                <a href="/about" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre nosotros</a>
               </li>
               <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contacto</a>
+                <a href="/contact" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contacto</a>
               </li>
               <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><i className="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="/login" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><i className="fa-solid fa-right-to-bracket"></i> Login</a>
               </li>
               <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><i className="fa-solid fa-user"></i> Register</a>
+                <a href="/register" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><i className="fa-solid fa-user"></i> Register</a>
               </li>
             </ul>
           </div>
