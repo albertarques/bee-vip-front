@@ -1,3 +1,5 @@
+import React from 'react';
+
 import React from 'react'
 import CategoryPopularSlider from '../components/partials/CategorySlider/CategoryPopularSlider'
 import CategoryMainSlider from '../components/partials/CategorySlider/CategoryMainSlider'
@@ -7,6 +9,8 @@ import InfoHome from '../components/InfoHome/InfoHome'
 
 export default function Home() {
   return (
+    <div>
+      <h1>home</h1>
     <div className="font-sans bg-slate-50">
       <section className="bg-blue-800 w-full p-2 sm:mx-auto sm:px-20">
         <h1 className="text-xl mt-2 mb-4 text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sunt illo quidem.</h1>
