@@ -34,21 +34,21 @@ export default function Home() {
   return (
     <div className="font-sans bg-slate-50">
       <section className="bg-blue-800 w-full p-2 sm:mx-auto sm:px-20">
-        <h1 className="text-xl mt-2 mb-4 text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sunt illo quidem.</h1>
+        <h1 className="text-xl mt-2 mb-4 text-slate-100">Somos el mejor servicio para emprendimientos de Colombia. No esperes más a publicar el tuyo!</h1>
         <Searchbar />
       </section>
 
-      <section className="container mt-4 mb-4 px-2 mx-auto">
+      <section className="container mt-4 mb-6 px-2 mx-auto">
         <h2 className="text-base font-medium font-title">Emprendimientos populares</h2>
         <div className="flex flex-row gap-2 mt-4 mb-4 overflow-x-scroll">
           {data && data.entrepreneurships.slice(0,3).map(item => (
             <a href={`/entrepreneurship/${item.id}`}>
-              <CategoryPopularSlider key={item.id} title={item.name} image={Coffee} />
+              <CategoryPopularSlider key={item.id} title={item.title} image={Coffee} />
             </a>
           ))}
         </div>
         
-        <h2 className="text-base font-medium font-title">Emprendimientos</h2>
+        <h2 className="text-base font-medium font-title">Categorías</h2>
         <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
           {data && data.categories.slice(0,6).map(item => (
             <CategoryMainSlider key={item.id} name={item.name} />
