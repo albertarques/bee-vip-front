@@ -6,10 +6,10 @@ export default function Footer() {
       <h3 className="mt-4 italic font-title font-semibold text-sm">BeeVip!</h3>
       <p className="font-sans font-normal text-xs">© BeeVip! International Ltd. 2023</p>
       <div className="text-lg mb-4 flex flex-row justify-center gap-4">
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"> <i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i className="fa-brands fa-twitter"></i></a>
+        <a href="#"> <i className="fa-brands fa-instagram"></i></a>
+        <a href="#"><i className="fa-brands fa-pinterest"></i></a>
+        <a href="#"><i className="fa-brands fa-linkedin"></i></a>
       </div>
     </div>
   )
