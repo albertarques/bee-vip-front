@@ -5,12 +5,14 @@ import CategoryMainSlider from "../components/partials/CategorySlider/CategoryMa
 import Searchbar from "../components/partials/Searchbar/Searchbar";
 import CategoryHomeCard from "../components/partials/CategoryCard/CategoryHomeCard";
 import InfoHome from "../components/InfoHome/InfoHome";
+import Navbar from "../components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <div>
       <h1>home</h1>
       <div className="font-sans bg-slate-50">
+        <Navbar/>
         <section className="bg-blue-800 w-full p-2 sm:mx-auto sm:px-20">
           <h1 className="text-xl mt-2 mb-4 text-slate-100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sunt
