@@ -4,7 +4,6 @@ import CategoryMainSlider from '../components/partials/CategorySlider/CategoryMa
 import Searchbar from '../components/partials/Searchbar/Searchbar'
 import CategoryHomeCard from '../components/partials/CategoryCard/CategoryHomeCard'
 import InfoHome from '../components/InfoHome/InfoHome'
-import axios from 'axios'
 import Coffee from '../assets/coffee.jpg'
 import { getEntrepreneurshipData } from '../apiService/entrepreneurshipService'
 import { getCategoriesData } from '../apiService/categoriesService'
@@ -26,7 +25,6 @@ export default function Home() {
       setCategories(categories.data.categories)
       console.log(categories)
       setLoading(false);
-
     }
     getData();
   }, []);
