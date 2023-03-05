@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import BackButton from '../components/partials/BackButton/BackButton'
 
 export default function ContactUs() {
   const form = useRef()

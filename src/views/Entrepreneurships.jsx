@@ -5,6 +5,7 @@ import CategoryMainSlider from '../components/partials/CategorySlider/CategoryMa
 import Coffee from '../assets/coffee.jpg'
 import { getEntrepreneurshipData } from '../apiService/entrepreneurshipService'
 import { getCategoriesData } from '../apiService/categoriesService'
+import BackButton from '../components/partials/BackButton/BackButton'
 
 export default function Entrepreneurships() {
   const [search, setSearch] = useState('')
@@ -27,7 +28,8 @@ export default function Entrepreneurships() {
   }, []);
 
   return (
-    <div className="container px-2">
+    <div className="container mb-6 px-2">
+      <BackButton />
       <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
         {categories && categories.slice(0,6).map(item => (
           <CategoryMainSlider key={item.id} name={item.name} />
