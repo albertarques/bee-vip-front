@@ -22,9 +22,9 @@ export default function SingleEntrepreneurship() {
 
   return (
     <div>
-      <main>
-        <CategorySingleCard title={post.title}/>
+      <CategorySingleCard title={post.title}/>
 
+      <div className="md:px-20">
         <ProductCard rating={post.avg_score} title={post.title} description={post.description} price={post.price}/>
         
         <section className="p-2 flex flex-col gap-3">
@@ -37,7 +37,7 @@ export default function SingleEntrepreneurship() {
 
         <h2 className="p-2 font-semibold font-title text-medium">Opiniones</h2>
         <CommentCard />
-      </main>
+      </div>
     </div>
   )
 }
