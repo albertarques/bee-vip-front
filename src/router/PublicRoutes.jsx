@@ -8,8 +8,8 @@ import CreateEntrepreneurship from '../views/CreateEntrepreneurship'
 import Payments from '../views/Payments'
 import About from '../views/About'
 import Contact from '../views/Contact'
-import LoginG from '../views/LoginG'
-import RegisterG from '../views/RegisterG'
+import Login from '../views/Login'
+import Register from '../views/Register'
 
 function PublicRoutes() {
   return (
@@ -23,8 +23,8 @@ function PublicRoutes() {
             <Route path='/payments' element={<Payments />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/login' element={<LoginG />} />
-            <Route path='/register' element={<RegisterG />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
           </Routes>
         </Layout>
     </Router> 
