@@ -85,7 +85,7 @@ export default function RegisterG() {
                           Ya tienes una cuenta? <a href="/login" className="font-medium text-primary-600 hover:underline dark:text-blue-500">Inicia sesión aquí</a>
                       </p>
                   </form>
-                  {/* {message && <p>{message}</p>} */}
+                  {/* {message && <p className="text-red-500">{message}</p>} */}
               </div>
           </div>
       </div>
