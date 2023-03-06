@@ -41,8 +41,8 @@ export default function Home() {
         <div className="flex flex-row gap-2 mt-4 mb-4 overflow-x-scroll">
           {!loading && console.log(data)}
           {!loading && data.entrepreneurships.slice(0,3).map(item => (
-            <Link to={`/entrepreneurship/${item.id}`} key={item.id}>
-              <CategoryPopularSlider title={item.title} image={Coffee} />
+            <Link to={`/entrepreneurship/${item.id}`}>
+              <CategoryPopularSlider title={item.title} key={item.id} image={Coffee} />
             </Link>
           ))}
         </div>
@@ -50,14 +50,14 @@ export default function Home() {
         <h2 className="text-base font-medium font-title">Categorías</h2>
         <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
           {!loading && categories.slice(0,6).map(item => (
-            <CategoryMainSlider name={item.name} />
+            <CategoryMainSlider name={item.name} key={item.id} />
           ))}
         </div>
         
         <div className="relative flex-shrink-0 w-full h-full">
           {!loading && data.entrepreneurships.slice(0,3).map(item => (
-            <Link to={`/entrepreneurship/${item.id}`} key={item.id} className="flex flex-row mt-4 mb-4 flex-wrap gap-2">
-              <CategoryHomeCard title={item.title}/>
+            <Link to={`/entrepreneurship/${item.id}`} className="flex flex-row mt-4 mb-4 flex-wrap gap-2">
+              <CategoryHomeCard title={item.title} key={item.id} />
             </Link>
           ))}
         </div>
