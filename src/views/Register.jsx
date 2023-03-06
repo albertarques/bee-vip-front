@@ -16,6 +16,9 @@ export default function RegisterG() {
     try {
       const response = await axios.post('http://localhost:8000/api/register', { username, email, password, phone })
       setMessage(response.data.message)
+      const access_token = response.data.authorisation.token
+      localStorage.setItem('token', access_token) // store the token in local storage
+      axios.defaults.headers.common['Authorization'] = `Bearer ${access_token}` // set the Authorization header for future requests
       Swal.fire({
         position: 'center',
         icon: 'success',
@@ -25,7 +28,7 @@ export default function RegisterG() {
       })
       setIsRegistered(true)
       setTimeout(() => {
-        navigate('/login');
+        navigate('/login')
       }, 2000); // Delay the navigation for 2 seconds (2000 milliseconds)
     } catch (error) {
       setMessage(error.response.data.message)
