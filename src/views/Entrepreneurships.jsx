@@ -3,36 +3,35 @@ import EntrepreneurshipCard from '../components/partials/EntrepreneurshipCard/En
 import Searchbar from '../components/partials/Searchbar/Searchbar'
 import CategoryMainSlider from '../components/partials/CategorySlider/CategoryMainSlider'
 import Coffee from '../assets/coffee.jpg'
-import axios from 'axios'
+import { getEntrepreneurshipData } from '../apiService/entrepreneurshipService'
+import { getCategoriesData } from '../apiService/categoriesService'
+import BackButton from '../components/partials/BackButton/BackButton'
 
 export default function Entrepreneurships() {
   const [search, setSearch] = useState('')
 
   const [data, setData] = useState(null)
+  const [categories, setCategories] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get('http://localhost:8000/api/entrepreneurships')
-        console.log(response.data)
-        setData(response.data)
-        setError(null)
-      } catch (err) {
-        setError(err.message)
-        setData(null)
-      } finally {
-        setLoading(false)
-      }
+    async function getData(){
+      const entrepreneurships = await getEntrepreneurshipData();
+      setData(entrepreneurships.data);
+      const categories = await getCategoriesData();
+      setCategories(categories.data.categories)
+      console.log(categories)
+      setLoading(false);
     }
-    getData()
-  }, [])
+    getData();
+  }, []);
 
   return (
-    <div className="container px-2">
+    <div className="container mb-6 px-2">
+      <BackButton />
       <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
-        {data && data.categories.slice(0,6).map(item => (
+        {categories && categories.slice(0,6).map(item => (
           <CategoryMainSlider key={item.id} name={item.name} />
         ))}
       </div>
