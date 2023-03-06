@@ -6,7 +6,6 @@ import '../styles/login.css'
 function LoginView() {
   return (
     <div className='loginview px-2'>
-        <br />
         <Login />
         <br />
         <hr />
