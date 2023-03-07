@@ -6,6 +6,7 @@ import CategorySingleCard from '../components/partials/CategoryCard/CategorySing
 import JuanValdezAvatar from '../assets/juanvaldezavatar.png'
 import CommentCard from '../components/partials/CommentCard/CommentCard'
 import ProductCard from '../components/partials/ProductCard/ProductCard'
+import PaymentButton from '../payments/PaymentButton'
 
 export default function SingleEntrepreneurship() {
   const { id } = useParams()
@@ -47,7 +48,7 @@ export default function SingleEntrepreneurship() {
           description={post.description} // use the description value from state
           currency='EUR'
         >
-          <button className="py-1 rounded font-medium text-slate-100 w-full bg-blue-700">Comprar</button>
+          <PaymentButton />
         </StripeCheckout>
         
         <section className="p-2 flex flex-col gap-3">
