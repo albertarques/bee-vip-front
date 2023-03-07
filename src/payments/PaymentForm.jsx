@@ -38,11 +38,23 @@ export default function PaymentForm() {
 					// cardCvc,
 			})
 			.then(response => {
-					alert('Payment processed successfully!')
+				Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Pago realizado con éxito!',
+          showConfirmButton: false,
+          timer: 2000
+        })
 			})
 			.catch(error => {
 					console.error(error);
-					alert('An error occurred while processing your payment.')
+					Swal.fire({
+						position: 'center',
+						icon: 'error',  
+						title: 'Ha habido un problema, prueba de nuevo!',
+						showConfirmButton: false,
+						timer: 2000
+					})
 			})
 	}
 

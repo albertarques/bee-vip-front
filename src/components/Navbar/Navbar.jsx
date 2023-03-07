@@ -1,5 +1,6 @@
 import React from 'react'
 import Bee from '../../assets/beeLogo.svg'
+import LogoutButton from '../partials/LogoutButton/LogoutButton'
 
 export default function Navbar() {
   return (
@@ -20,22 +21,25 @@ export default function Navbar() {
                 <a href="/" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-slate-900" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="/entrepreneurships" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent">Emprendimientos</a>
+                <a href="/entrepreneurships" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-slate-900">Emprendimientos</a>
               </li>
               <li>
-                <a href="/createEntrepreneurship" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent">Crear Emprendimiento</a>
+                <a href="/createEntrepreneurship" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-slate-900">Crear Emprendimiento</a>
               </li>
               <li>
-                <a href="/about" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent">Sobre nosotros</a>
+                <a href="/about" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-slate-900">Sobre nosotros</a>
               </li>
               <li>
-                <a href="/contact" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent">Contacto</a>
+                <a href="/contact" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-slate-900">Contacto</a>
               </li>
               <li>
-                <a href="/login" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent"><i className="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="/login" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-slate-900"><i className="fa-solid fa-right-to-bracket"></i> Login</a>
               </li>
               <li>
-                <a href="/register" className="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-900 md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent"><i className="fa-solid fa-user"></i> Register</a>
+                <LogoutButton />
+              </li>
+              <li>
+                <a href="/register" className="block py-2 pl-3 pr-4 text-slate-900 bg-yellow-400 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-slate-900"><i className="fa-solid fa-user"></i> Register</a>
               </li>
             </ul>
           </div>

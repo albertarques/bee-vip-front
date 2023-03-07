@@ -28,7 +28,7 @@ export default function Entrepreneurships() {
   }, []);
 
   return (
-    <div className="container mb-6 px-2">
+    <div className="container mb-6 px-2 md:mx-auto">
       <BackButton />
       <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
         {categories && categories.slice(0,6).map(item => (
@@ -37,12 +37,14 @@ export default function Entrepreneurships() {
       </div>
 
       <Searchbar />
-
-      {data && data.entrepreneurships.slice(0,6).map(item => (
-        <a href={`/entrepreneurship/${item.id}`}>
-          <EntrepreneurshipCard key={item.id} id={item.id} title={item.title} email={item.email} description={item.description} image={Coffee} />
-        </a>
-      ))} 
+      
+      <div className="flex flex-col md:gap-4 md:flex-shrink-0 md:flex-row md:flex-wrap">
+        {data && data.entrepreneurships.slice(0,6).map(item => (
+          <a href={`/entrepreneurship/${item.id}`}>
+            <EntrepreneurshipCard key={item.id} id={item.id} title={item.title} email={item.email} description={item.description} image={Coffee} />
+          </a>
+        ))} 
+      </div>
     </div>
   )
 }

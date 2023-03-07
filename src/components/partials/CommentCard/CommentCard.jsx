@@ -3,7 +3,7 @@ import JuanValdezAvatar from '../../../assets/juanvaldezavatar.png'
 
 export default function CommentCard() {
   return (
-    <div className="p-2 flex flex-col gap-6 mb-4">
+    <div className="p-2 flex flex-col gap-6 mb-4 md:flex-row">
       <div className="flex flex-row gap-4">
         <img src={JuanValdezAvatar} className="m-2 object-cover w-auto h-auto border-2 border-blue-700 rounded-full" alt="avatar" />
         <div className="flex flex-col gap-2">
