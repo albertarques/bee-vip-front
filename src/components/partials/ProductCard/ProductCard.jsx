@@ -7,7 +7,7 @@ export default function ProductCard(props) {
   function increment() {
     //setCount(prevCount => prevCount+=1);
     setCount(function (prevCount) {
-      return (prevCount += 1);
+      return (prevCount += 1)
     });
   }
 
@@ -44,8 +44,6 @@ export default function ProductCard(props) {
           <button onClick={increment} className="bg-yellow-400 px-3 rounded-r py-0.5 font-semibold text-lg"><i className="fa-solid fa-plus"></i></button>
         </div>
       </section>
-
-      <button className="py-1 rounded font-medium text-slate-100 w-full bg-blue-700">Comprar</button>
     </div>
   )
 }
