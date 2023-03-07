@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import JuanValdezLogo from '../../../assets/juanvaldezlogo.png'
+import PaymentButton from '../../../payments/PaymentButton';
 
 export default function ProductCard(props) {
   const [count, setCount] = useState(1)
