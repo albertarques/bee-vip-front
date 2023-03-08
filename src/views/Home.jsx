@@ -1,5 +1,3 @@
-import React from 'react';
-
 import React from 'react'
 import CategoryPopularSlider from '../components/partials/CategorySlider/CategoryPopularSlider'
 import CategoryMainSlider from '../components/partials/CategorySlider/CategoryMainSlider'
@@ -28,6 +26,7 @@ export default function Home() {
         <h2 className="mt-6 text-base font-medium font-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, aut.</h2>
         <InfoHome />
       </section>
+    </div>
     </div>
   )
 }

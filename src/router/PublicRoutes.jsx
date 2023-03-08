@@ -1,9 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
-// Views
 import Home from '../views/Home'
-import Emprendimientos from '../views/Emprendimientos'
+import Entrepreneurships from '../views/Entrepreneurships'
 import EntrepreneurshipRegister from '../views/EntrepreneurshipRegister'
 
 function PublicRoutes() {
@@ -11,7 +9,7 @@ function PublicRoutes() {
     <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/entrepreneurships' element={ <Emprendimientos /> } />
+          <Route path='/entrepreneurships' element={ <Entrepreneurships /> } />
           <Route path='/entrepreneurshipsregister' element={ <EntrepreneurshipRegister /> } />
         </Routes>
     </Router> 
