@@ -76,5 +76,6 @@ export default function Home() {
         <InfoHome />
       </section>
     </div>
+    </div>
   )
 }
