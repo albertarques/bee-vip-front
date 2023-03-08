@@ -1,14 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { SearchEntrepreneurshipsContext } from '../../../context/SearchEntrepreneurshipsContext'
-import CategoryHomeCard from '../CategoryCard/CategoryHomeCard'
 
 export default function Searchbar(props) {
 
   const {searchData} = useContext(SearchEntrepreneurshipsContext)
   const {searchFilteredData, setSearchFilteredData} = useContext(SearchEntrepreneurshipsContext)
 
-  const [searchWord, setSearchWord] = useState("")
+  const [searchWord, setSearchWord] = useState('')
   
 
   return (
@@ -27,8 +26,8 @@ export default function Searchbar(props) {
       </div>
       
       <div>
-        {searchWord !== "" && searchData.entrepreneurships.map(item => 
-          item.title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(searchWord) ?
+        {searchWord !== '' && searchData.entrepreneurships.map(item => 
+          item.title.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(searchWord) ?
             <>
               <h2>Resultados:</h2>
               <Link to={`/entrepreneurship/${item.id}`} key={item.id} className="flex flex-row mt-4 mb-4 flex-wrap gap-2">

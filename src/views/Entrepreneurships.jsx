@@ -45,7 +45,6 @@ export default function Entrepreneurships() {
             <div key={item.id} className="relative flex-shrink-0">
               <button onClick={(e) => filterEntrepreneurships(e.target.id)} id={item.id} className="mr-2 px-4 py-2 rounded text-base text-slate-100 font-semibold bg-blue-700 active:bg-blue-700 active:text-slate-100">{item.name}</button>
             </div>
-          // <CategoryMainSlider id={item.id} name={item.name}/>
         ))}
       </div>
         <Searchbar />
