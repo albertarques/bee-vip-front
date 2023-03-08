@@ -1,17 +1,14 @@
 import React, { useState, useEffect, useContext } from 'react'
 import CategoryPopularSlider from '../components/partials/CategorySlider/CategoryPopularSlider'
-import CategoryMainSlider from '../components/partials/CategorySlider/CategoryMainSlider'
 import Searchbar from '../components/partials/Searchbar/Searchbar'
 import CategoryHomeCard from '../components/partials/CategoryCard/CategoryHomeCard'
 import InfoHome from '../components/InfoHome/InfoHome'
-import Coffee from '../assets/coffee.jpg'
 import { getEntrepreneurshipData } from '../apiService/entrepreneurshipService'
 import { getCategoriesData } from '../apiService/categoriesService'
 import { Link } from 'react-router-dom'
 import { SearchEntrepreneurshipsProvider } from '../context/SearchEntrepreneurshipsContext'
 
 export default function Home() {
-  const [search, setSearch] = useState("")
   const [data, setData] = useState(null);
   const [filteredData, setFilteredData] = useState(null) // Data filtrada
   const [categories, setCategories] = useState();
@@ -50,7 +47,7 @@ export default function Home() {
         <div className="flex flex-row gap-2 mt-4 mb-4 overflow-x-scroll">
           {data && data.slice(0,3).map(item => (
             <Link to={`/entrepreneurship/${item.id}`} key={item.id}>
-              <CategoryPopularSlider title={item.title} image={Coffee} />
+              <CategoryPopularSlider title={item.title} image={item.product_img} />
             </Link>
           ))}
         </div>
@@ -67,7 +64,7 @@ export default function Home() {
         <div className="relative flex-shrink-0 w-full h-full">
           {filteredData && filteredData.slice(0,3).map(item => (
             <Link to={`/entrepreneurship/${item.id}`} key={item.id} className="flex flex-row mt-4 mb-4 flex-wrap gap-2">
-              <CategoryHomeCard title={item.title} />
+              <CategoryHomeCard title={item.title} image={item.product_img} />
             </Link>
           ))}
         </div>

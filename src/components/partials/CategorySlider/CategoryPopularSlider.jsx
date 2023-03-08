@@ -1,5 +1,4 @@
 import React from 'react'
-// import Coffee from '../../../assets/coffee.jpg'
 
 export default function CategoryPopularSlider(props) {
   return (

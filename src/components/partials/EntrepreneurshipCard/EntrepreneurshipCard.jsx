@@ -1,5 +1,4 @@
 import React from "react"
-import Coffee from '../../../assets/coffee.jpg'
 
 export default function EntrepreneurshipCard(props) {
   return (
@@ -8,7 +7,7 @@ export default function EntrepreneurshipCard(props) {
         className="mt-4 max-w-sm sm:max-w-xs bg-dark-blue border border-gray rounded-lg shadow dark:bg-blue dark:border-gray-700"
       >
         <a href="#">
-          <img className="rounded-t-lg" src={Coffee} alt="img" />
+          <img className="rounded-t-lg" src={props.image} alt="img" />
         </a>
         <div className="p-5">
           <a href="#">

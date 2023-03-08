@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import EntrepreneurshipCard from '../components/partials/EntrepreneurshipCard/EntrepreneurshipCard'
 import Searchbar from '../components/partials/Searchbar/Searchbar'
-import CategoryMainSlider from '../components/partials/CategorySlider/CategoryMainSlider'
-import Coffee from '../assets/coffee.jpg'
 import { getEntrepreneurshipData } from '../apiService/entrepreneurshipService'
 import { getCategoriesData } from '../apiService/categoriesService'
 import BackButton from '../components/partials/BackButton/BackButton'
@@ -52,7 +50,7 @@ export default function Entrepreneurships() {
       <div className="flex flex-col md:gap-4 md:flex-shrink-0 md:flex-row md:flex-wrap">
         {filteredData && filteredData.map(item => (
           <Link to={`/entrepreneurship/${item.id}`}>
-            <EntrepreneurshipCard key={item.id} id={item.id} title={item.title} email={item.email} description={item.description} image={Coffee} />
+            <EntrepreneurshipCard key={item.id} id={item.id} title={item.title} email={item.email} description={item.description} image={item.product_img} />
           </Link>
         ))} 
       </div>

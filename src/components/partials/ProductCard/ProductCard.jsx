@@ -38,7 +38,7 @@ export default function ProductCard(props) {
       </section>
 
       <section className="flex flex-row justify-between">
-        <h3 className="font-title font-semibold">{props.price}€/kg</h3>
+        <h3 className="font-title font-semibold">{props.price}€</h3>
         <div className="flex flex-row justify-between border-y border-yellow-400 rounded">
           <button onClick={decrement} className="bg-yellow-400 px-3 rounded-l py-0.5 font-semibold text-lg"><i className="fa-solid fa-minus"></i></button>
           <h2 className="font-semibold font-sans px-3 py-1 text-xl border-y-yellow-400">{count}</h2>

@@ -36,7 +36,7 @@ export default function SingleEntrepreneurship() {
 
   return (
     <div>
-      <CategorySingleCard title={post.title}/>
+      <CategorySingleCard title={post.title} image={post.product_img} />
 
       <div className="md:px-20">
         <ProductCard rating={post.avg_score} title={post.title} description={post.description} price={post.price}/>
