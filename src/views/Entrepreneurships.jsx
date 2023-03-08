@@ -8,6 +8,7 @@ import { getCategoriesData } from '../apiService/categoriesService'
 import BackButton from '../components/partials/BackButton/BackButton'
 import { Link } from 'react-router-dom'
 
+
 export default function Entrepreneurships() {
   const [search, setSearch] = useState('')
 
@@ -47,9 +48,8 @@ export default function Entrepreneurships() {
           // <CategoryMainSlider id={item.id} name={item.name}/>
         ))}
       </div>
+        <Searchbar />
 
-      <Searchbar />
-      
       <div className="flex flex-col md:gap-4 md:flex-shrink-0 md:flex-row md:flex-wrap">
         {filteredData && filteredData.map(item => (
           <Link to={`/entrepreneurship/${item.id}`}>

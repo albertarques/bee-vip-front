@@ -10,24 +10,27 @@ import About from '../views/About'
 import Contact from '../views/Contact'
 import Login from '../views/Login'
 import Register from '../views/Register'
+import { SearchEntrepreneurshipsContext, SearchEntrepreneurshipsProvider } from '../context/SearchEntrepreneurshipsContext'
 
 function PublicRoutes() {
   return (
-    <Router>
-        <Layout>
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='/entrepreneurships' element={<Entrepreneurships />} />
-            <Route path='/entrepreneurship/:id' element={<SingleEntrepreneurship />} />
-            <Route path='/createEntrepreneurship' element={<CreateEntrepreneurship />} />
-            <Route path='/payments' element={<Payments />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
-          </Routes>
-        </Layout>
-    </Router> 
+    <SearchEntrepreneurshipsProvider>
+      <Router>
+          <Layout>
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route path='/entrepreneurships' element={<Entrepreneurships />} />
+              <Route path='/entrepreneurship/:id' element={<SingleEntrepreneurship />} />
+              <Route path='/createEntrepreneurship' element={<CreateEntrepreneurship />} />
+              <Route path='/payments' element={<Payments />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
+            </Routes>
+          </Layout>
+      </Router> 
+    </SearchEntrepreneurshipsProvider>
   )
 }
 
