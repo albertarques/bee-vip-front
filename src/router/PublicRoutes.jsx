@@ -10,7 +10,7 @@ import About from '../views/About'
 import Contact from '../views/Contact'
 import Login from '../views/Login'
 import Register from '../views/Register'
-import { SearchEntrepreneurshipsContext, SearchEntrepreneurshipsProvider } from '../context/SearchEntrepreneurshipsContext'
+import { SearchEntrepreneurshipsProvider } from '../context/SearchEntrepreneurshipsContext'
 
 function PublicRoutes() {
   return (

@@ -26,7 +26,6 @@ export default function Home() {
 
       const categories = await getCategoriesData();
       setCategories(categories)
-      // console.log(categories)
       setLoading(false);
     }
     getData();
