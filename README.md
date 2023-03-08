@@ -1,4 +1,4 @@
-<div align="center"><img src="/public/readme-img/logoBeevip.png" width="100"/></div>
+<div align="center"><img src="/public/readme-img/logoBeevip.png" width="400"/></div>
 
 ----
 
