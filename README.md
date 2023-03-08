@@ -1,4 +1,4 @@
-<div align="center"><img src="/public/readme-img/beeLogo.svg" width="100"/><i><strong>Beevip!</strong></i></div>
+<div align="center"><img src="/public/readme-img/logoBeevip.png" width="400"/></div>
 
 ----
 
@@ -37,7 +37,6 @@ This project is part of the F5's final project. We have two weeks to create a ma
 * [Screenshots](#screenshots)
 * [Technologies](#stacks)
 * [Installation](#how-to-install-this-project)
-* [Tests](#tests)
 * [Methodology](#methodology)
 * [Next Steps](#next-steps)
 
