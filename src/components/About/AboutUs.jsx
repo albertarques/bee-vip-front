@@ -29,7 +29,7 @@ function AboutUs() {
               </a>
               <div className="p-5">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Albet Arques</a>
+                  <a href="#">Albert Arqués</a>
                 </h3>
                 <span className="text-gray-500 dark:text-gray-400">
                   Full-Stack Developer
@@ -91,7 +91,7 @@ function AboutUs() {
               </a>
               <div className="p-5">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Guillem Martinez</a>
+                  <a href="#">Guillem Martínez</a>
                 </h3>
                 <span className="text-gray-500 dark:text-gray-400">
                   UI Designer and Junior FullStack Developer
@@ -214,7 +214,7 @@ function AboutUs() {
               </a>
               <div className="p-5">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Alejandro Rodriguez</a>
+                  <a href="#">Alejandro Rodríguez</a>
                 </h3>
                 <span className="text-gray-500 dark:text-gray-400">
                   Full-Stack Developer

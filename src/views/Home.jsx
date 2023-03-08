@@ -44,7 +44,7 @@ export default function Home() {
 
       <section className="container mt-4 mb-6 px-2 mx-auto">
         <h2 className="text-base font-medium font-title">Emprendimientos populares</h2>
-        <div className="flex flex-row gap-2 mt-4 mb-4 overflow-x-scroll">
+        <div className="flex flex-row gap-2 flex-nowrap mt-4 mb-4 overflow-x-scroll">
           {data && data.slice(0,3).map(item => (
             <Link to={`/entrepreneurship/${item.id}`} key={item.id}>
               <CategoryPopularSlider title={item.title} image={item.product_img} />
@@ -69,7 +69,7 @@ export default function Home() {
           ))}
         </div>
 
-        <h2 className="mt-6 text-base font-medium font-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, aut.</h2>
+        <h2 className="mt-6 text-base font-medium md:text-lg font-title">Publica tu emprendimiento o producto de forma segura en Beevip!</h2>
         <InfoHome />
       </section>
     </div>
