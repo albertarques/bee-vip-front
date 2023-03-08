@@ -1,40 +1,40 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react"
+import { useNavigate, Link } from "react-router-dom"
 import axios from "axios";
 
 export default function RegisterG() {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-  const [isRegistered, setIsRegistered] = useState(false);
-  const navigate = useNavigate();
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
+  const [isRegistered, setIsRegistered] = useState(false)
+  const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
       const response = await axios.post("http://localhost:8000/api/register", {
         username,
         email,
         password,
         phone,
-      });
+      })
       setMessage(response.data.message);
-      const access_token = response.data.authorisation.token;
-      localStorage.setItem("token", access_token); // store the token in local storage
-      axios.defaults.headers.common["Authorization"] = `Bearer ${access_token}`; // set the Authorization header for future requests
+      const access_token = response.data.authorisation.token
+      localStorage.setItem('token', access_token) // store the token in local storage
+      axios.defaults.headers.common['Authorization'] = `Bearer ${access_token}` // set the Authorization header for future requests
       Swal.fire({
         position: "center",
         icon: "success",
         title: "Te has registrado con éxito!",
         showConfirmButton: false,
         timer: 2000,
-      });
+      })
       setIsRegistered(true);
       setTimeout(() => {
-        navigate("/login");
-      }, 2000); // Delay the navigation for 2 seconds (2000 milliseconds)
+        navigate("/login")
+      }, 2000) // Delay the navigation for 2 seconds (2000 milliseconds)
     } catch (error) {
       setMessage(error.response.data.message);
       Swal.fire({
@@ -43,13 +43,13 @@ export default function RegisterG() {
         title: "Ha habido un problema, prueba de nuevo!",
         showConfirmButton: false,
         timer: 2000,
-      });
+      })
     }
   };
 
   return (
     <section className="bg-gray-50 dark:bg-yellow-400">
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div className="flex flex-col items-center justify-center px-6 py-8 md:py-2 mx-auto md:h-screen lg:py-0">
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-slate-50 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-slate-900">
@@ -152,12 +152,12 @@ export default function RegisterG() {
                     className="font-light text-gray-500 dark:text-slate-600"
                   >
                     Acepto los{" "}
-                    <a
+                    <Link
                       className="font-medium text-primary-600 hover:underline dark:text-blue-500"
                       href="#"
                     >
                       Términos y Condiciones
-                    </a>
+                    </Link>
                   </label>
                 </div>
               </div>
@@ -169,12 +169,12 @@ export default function RegisterG() {
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Ya tienes una cuenta?{" "}
-                <a
+                <Link
                   href="/login"
                   className="font-medium text-primary-600 hover:underline dark:text-blue-500"
                 >
                   Inicia sesión aquí
-                </a>
+                </Link>
               </p>
             </form>
             {/* {message && <p className="text-red-500">{message}</p>} */}

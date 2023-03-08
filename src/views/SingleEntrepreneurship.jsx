@@ -40,7 +40,7 @@ export default function SingleEntrepreneurship() {
       <CategorySingleCard title={post.title} image={post.product_img} />
 
       <div className="px-2 md:px-20">
-        <BackButton />
+x        <BackButton />
         <ProductCard rating={post.avg_score} title={post.title} description={post.description} price={post.price}/>
         <StripeCheckout
           stripeKey="pk_test_51Mgl0xL744SSmgAvzusTV8spcJCMMjINutqizGKPX6o4vDvO0tokDwp5JzOzwRTzq1t7gQjcWXg1HKpgLplIwixC00Zou3asIE"

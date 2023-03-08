@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default function LoginG() {
@@ -42,7 +42,7 @@ export default function LoginG() {
 
   return (
     <section className="bg-gray-50 dark:bg-yellow-400">
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div className="flex flex-col items-center justify-center px-6 py-8 md:py-2 mx-auto md:h-screen lg:py-0">
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-slate-50 dark:border-gray-700">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-slate-900">
@@ -66,11 +66,11 @@ export default function LoginG() {
                               <label htmlFor="remember" className="text-gray-500 dark:text-gray-700">Recuérdame</label>
                             </div>
                         </div>
-                        <a href="#" className="text-sm ml-2 font-medium text-primary-600 hover:underline dark:text-blue-500">Olvidaste la contraseña?</a>
+                        <Link href="#" className="text-sm ml-2 font-medium text-primary-600 hover:underline dark:text-blue-500">Olvidaste la contraseña?</Link>
                     </div>
                     <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Inicia sesión</button>
                     <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                        Aún no tienes cuenta? <a href="/register" className="font-medium text-primary-600 hover:underline dark:text-blue-500">Regístrate</a>
+                        Aún no tienes cuenta? <Link href="/register" className="font-medium text-primary-600 hover:underline dark:text-blue-500">Regístrate</Link>
                     </p>
                 </form>
                 {/* {message && <p>{message}</p>} */}
