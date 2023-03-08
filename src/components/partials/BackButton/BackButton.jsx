@@ -3,10 +3,9 @@ import { Link } from "react-router-dom"
 
 export default function BackButton() {
   return (
-    <div className="mt-3 text-sm font-medium">
+    <div className="mt-3 text-base font-medium">
       <Link to='/'>
-        <i class="fa-solid fa-arrow-left"></i>
-        Volver
+        <i className="fa-solid fa-arrow-left"></i>
       </Link>
     </div>
   )

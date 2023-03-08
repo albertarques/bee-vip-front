@@ -4,12 +4,8 @@ import Searchbar from '../components/partials/Searchbar/Searchbar'
 import { getEntrepreneurshipData } from '../apiService/entrepreneurshipService'
 import { getCategoriesData } from '../apiService/categoriesService'
 import BackButton from '../components/partials/BackButton/BackButton'
-import { Link } from 'react-router-dom'
-
 
 export default function Entrepreneurships() {
-  const [search, setSearch] = useState('')
-
   const [data, setData] = useState(null) // Data original
   const [filteredData, setFilteredData] = useState(null) // Data filtrada
   const [categories, setCategories] = useState(null)
@@ -35,8 +31,6 @@ export default function Entrepreneurships() {
 
   return (
     <div className="container mb-6 px-2 md:mx-auto">
-          {console.log(data)}
-
       <BackButton />
       <div className="flex flex-row mt-4 mb-4 overflow-x-scroll">
         {categories && categories.slice(0,6).map(item => (
@@ -47,11 +41,9 @@ export default function Entrepreneurships() {
       </div>
         <Searchbar />
 
-      <div className="flex flex-col md:gap-4 md:flex-shrink-0 md:flex-row md:flex-wrap">
+      <div className="flex flex-col justify-center sm:justify-between md:gap-4 md:flex-shrink-0 md:flex-row md:flex-wrap">
         {filteredData && filteredData.map(item => (
-          <Link to={`/entrepreneurship/${item.id}`}>
-            <EntrepreneurshipCard key={item.id} id={item.id} title={item.title} email={item.email} description={item.description} image={item.product_img} />
-          </Link>
+          <EntrepreneurshipCard key={item.id} id={item.id} title={item.title} email={item.email} description={item.description} image={item.product_img} />
         ))} 
       </div>
     </div>

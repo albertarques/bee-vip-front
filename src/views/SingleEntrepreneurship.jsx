@@ -7,6 +7,7 @@ import JuanValdezAvatar from '../assets/juanvaldezavatar.png'
 import CommentCard from '../components/partials/CommentCard/CommentCard'
 import ProductCard from '../components/partials/ProductCard/ProductCard'
 import PaymentButton from '../payments/PaymentButton'
+import BackButton from '../components/partials/BackButton/BackButton'
 
 export default function SingleEntrepreneurship() {
   const { id } = useParams()
@@ -38,7 +39,8 @@ export default function SingleEntrepreneurship() {
     <div>
       <CategorySingleCard title={post.title} image={post.product_img} />
 
-      <div className="md:px-20">
+      <div className="px-2 md:px-20">
+        <BackButton />
         <ProductCard rating={post.avg_score} title={post.title} description={post.description} price={post.price}/>
         <StripeCheckout
           stripeKey="pk_test_51Mgl0xL744SSmgAvzusTV8spcJCMMjINutqizGKPX6o4vDvO0tokDwp5JzOzwRTzq1t7gQjcWXg1HKpgLplIwixC00Zou3asIE"

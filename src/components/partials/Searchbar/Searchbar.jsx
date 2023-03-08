@@ -28,12 +28,9 @@ export default function Searchbar(props) {
       <div>
         {searchWord !== '' && searchData.entrepreneurships.map(item => 
           item.title.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(searchWord) ?
-            <>
-              <h2>Resultados:</h2>
-              <Link to={`/entrepreneurship/${item.id}`} key={item.id} className="flex flex-row mt-4 mb-4 flex-wrap gap-2">
-                <h2>{item.title}</h2>
-              </Link> 
-            </>
+            <Link to={`/entrepreneurship/${item.id}`} key={item.id} className="flex flex-row mt-4 mb-4 flex-wrap gap-2">
+              <h2>{item.title}</h2>
+            </Link> 
             : null
         )}
       </div>
