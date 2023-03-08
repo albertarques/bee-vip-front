@@ -8,7 +8,7 @@ export default function Searchbar(props) {
   const {searchData} = useContext(SearchEntrepreneurshipsContext)
   const {searchFilteredData, setSearchFilteredData} = useContext(SearchEntrepreneurshipsContext)
 
-  const [searchWord, setSearchWord] = useState(null)
+  const [searchWord, setSearchWord] = useState("")
   
 
   return (
@@ -27,7 +27,7 @@ export default function Searchbar(props) {
       </div>
       
       <div>
-        {searchData && searchData.entrepreneurships.map(item => 
+        {searchWord !== "" && searchData.entrepreneurships.map(item => 
           item.title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(searchWord) ?
             <>
               <h2>Resultados:</h2>
