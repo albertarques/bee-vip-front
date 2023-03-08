@@ -1,4 +1,4 @@
-<div align="center"><img src="/public/readme-img/beeLogo.svg" width="100"/><i><strong>Beevip!</strong></i></div>
+<div align="center"><img src="/public/readme-img/logoBeevip.png" width="100"/></div>
 
 ----
 
