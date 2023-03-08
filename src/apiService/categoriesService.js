@@ -4,8 +4,7 @@ const CATEGORIES_URL = 'http://localhost:8000/api/categories'
 const getCategoriesData = async () => {
   try{
     const response = await axios.get(CATEGORIES_URL)
-    // console.log(response)
-    return response
+    return response.data
   } catch($err){
     return $err
   }

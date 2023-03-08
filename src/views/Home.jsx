@@ -23,7 +23,7 @@ export default function Home() {
       setData(entrepreneurships.data);
       const categories = await getCategoriesData();
       setCategories(categories.data.categories)
-      console.log(categories)
+      // console.log(categories)
       setLoading(false);
     }
     getData();
@@ -39,7 +39,6 @@ export default function Home() {
       <section className="container mt-4 mb-6 px-2 mx-auto">
         <h2 className="text-base font-medium font-title">Emprendimientos populares</h2>
         <div className="flex flex-row gap-2 mt-4 mb-4 overflow-x-scroll">
-          {!loading && console.log(data)}
           {!loading && data.entrepreneurships.slice(0,3).map(item => (
             <Link to={`/entrepreneurship/${item.id}`}>
               <CategoryPopularSlider title={item.title} key={item.id} image={Coffee} />
