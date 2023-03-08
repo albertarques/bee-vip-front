@@ -12,7 +12,7 @@ export default function Searchbar(props) {
               <input type="search" id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-50 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-700 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Prueba con 'pasteles cumple'" required />
           </div>
       </form>
-      <button type="submit" className="mt-2 w-full text-slate-900 bg-yellow-400 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-yellow-400 dark:hover:bg-red-700 dark:hover:text-slate-100 dark:focus:ring-blue-800">Buscar</button>
+      <button type="submit" className="mt-2 w-full text-slate-900 bg-yellow-400 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-yellow-400 dark:hover:bg-red-500 dark:hover:text-slate-100 dark:focus:ring-blue-800">Buscar</button>
     </div>
   )
 }

@@ -5,6 +5,7 @@ const getEntrepreneurshipData = async () => {
   try{
     const response = await axios.get(ENTREPRENEURSHIPS_URL)
     // console.log('Data ok on EntrepreneurshipsService')
+    console.log(response)
     return response
   } catch($err){
     return $err
