@@ -6,15 +6,15 @@ import { getEntrepreneurships } from "../services/entrepreneurships.service";
 import { getCategories } from "../services/categories.service";
 
 export default function Entrepreneurships() {
-  const [data, setData] = useState(null); // Data original
-  const [filteredData, setFilteredData] = useState(null); // Data filtrada
-  const [categories, setCategories] = useState(null);
+  const [data, setData] = useState([]); // Data original
+  const [filteredData, setFilteredData] = useState([]); // Data filtrada
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const getAllEntrepreneurships = async () => {
     const { data } = await getEntrepreneurships();
     setData(data.entrepreneurships);
+    filterEntrepreneurships(id);
   };
 
   const getAllCategories = async () => {
@@ -22,15 +22,15 @@ export default function Entrepreneurships() {
     setData(data.categories);
   };
 
+  function filterEntrepreneurships(id) {
+    const newData = id ? data.filter((item) => item.category_id == id) : data;
+    setFilteredData(newData);
+  }
+
   useEffect(() => {
     getAllEntrepreneurships();
     getAllCategories();
   }, []);
-
-  function filterEntrepreneurships(id) {
-    const newData = data.filter((item) => item.category_id == id);
-    setFilteredData(newData);
-  }
 
   return (
     <div className="container mb-6 px-2 md:mx-auto">
@@ -51,7 +51,7 @@ export default function Entrepreneurships() {
       <Searchbar />
 
       <div className="flex flex-col justify-center sm:justify-between md:gap-4 md:flex-shrink-0 md:flex-row md:flex-wrap">
-        {filteredData?.map(({id, title, email, description, product_img}) => (
+        {filteredData?.map(({ id, title, email, description, product_img }) => (
             <EntrepreneurshipCard
               key={id}
               id={id}
