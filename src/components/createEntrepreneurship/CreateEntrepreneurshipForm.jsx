@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import PaymentComponent from "./PaymentComponent";
-import PaymentMethodAlert from "./PaymentMethodAlert";
-import PaymentMethodAlert2 from "./PaymentMethosAlert2";
-import axios from "axios";
+import React, { useState } from "react"
+import PaymentComponent from "./PaymentComponent"
+import PaymentMethodAlert from "./PaymentMethodAlert"
+import PaymentMethodAlert2 from "./PaymentMethosAlert2"
+import axios from 'axios'
 
 export default function CreateEntrepreneurshipForm() {
+  const [message, setMessage] = useState('')
   const [title, setTitle] = useState('')
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState('')
 
-  const handleCreateEntrepreneurship = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     try {
       const response = await axios.post(
         'http://localhost:8000/api/entrepreneurships',
-        { title, name, image, description, price }
+        { name, title, product_img, description, price }
       )
-      console.log(response.data)
-      response.data
+      setMessage(response.data)
       Swal.fire({
         position: "center",
         icon: "success",
@@ -47,7 +47,7 @@ export default function CreateEntrepreneurshipForm() {
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-slate-50 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <form
-              onSubmit={handleCreateEntrepreneurship}
+              onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6"
               action="#"
             >
@@ -125,7 +125,6 @@ export default function CreateEntrepreneurshipForm() {
                 aria-describedby="user_avatar_help"
                 id="user_avatar"
                 type="file"
-                value={image}
                 onChange={(event) => setImage(event.target.files[0])}
               />
 
