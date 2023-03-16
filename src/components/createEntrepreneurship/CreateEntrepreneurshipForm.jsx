@@ -1,25 +1,34 @@
-import React, { useState } from "react"
-import PaymentComponent from "./PaymentComponent"
-import PaymentMethodAlert from "./PaymentMethodAlert"
-import PaymentMethodAlert2 from "./PaymentMethosAlert2"
-import axios from 'axios'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import PaymentComponent from "./PaymentComponent";
+import PaymentMethodAlert from "./PaymentMethodAlert";
+import PaymentMethodAlert2 from "./PaymentMethosAlert2";
+import { createEntrepreneurship } from "../../services/entrepreneurships.service";
 
 export default function CreateEntrepreneurshipForm() {
-  const [message, setMessage] = useState('')
-  const [title, setTitle] = useState('')
-  const [name, setName] = useState('')
-  const [image, setImage] = useState('')
-  const [description, setDescription] = useState('')
-  const [price, setPrice] = useState('')
+  const [message, setMessage] = useState("");
+  const [title, setTitle] = useState("");
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     try {
-      const response = await axios.post(
-        'http://localhost:8000/api/entrepreneurships',
-        { name, title, product_img, description, price }
-      )
-      setMessage(response.data)
+      console.log(image);
+
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('title', title);
+      formData.append('description', description);
+      formData.append('product_img', image);
+      formData.append('price', price);
+      formData.append('category_id', 1);
+
+      const { data } = await createEntrepreneurship(formData);
+      console.log(data);
       Swal.fire({
         position: "center",
         icon: "success",
@@ -29,17 +38,18 @@ export default function CreateEntrepreneurshipForm() {
       });
       setTimeout(() => {
         navigate("/");
-      }, 2000) // Delay the navigation for 2 seconds (2000 milliseconds)
+      }, 2000); // Delay the navigation for 2 seconds (2000 milliseconds)
     } catch (error) {
+      console.log(error);
       Swal.fire({
         position: "center",
         icon: "error",
         title: "Ha habido un problema, prueba de nuevo!",
         showConfirmButton: false,
         timer: 2000,
-      })
+      });
     }
-  }
+  };
 
   return (
     <section className="bg-gray-50 dark:bg-yellow-400">
@@ -50,6 +60,7 @@ export default function CreateEntrepreneurshipForm() {
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6"
               action="#"
+              encType="multipart/form-data"
             >
               <div>
                 <label
